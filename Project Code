@@ -21,18 +21,17 @@ int main() {
     int i;
 
     printf("Enter student name: ");
-    scanf(" %[^\n]", s.name);  // Corrected format specifier
+    scanf(" %[^\n]", s.name);
     printf("Enter roll number: ");
     scanf("%d", &s.roll);
-    printf("Enter marks for 5 subjects:\n");  // Added newline for clarity
-
+    printf("Enter marks for 5 subjects:\n");
     for (i = 0; i < 5; i++) {
         printf("Subject %d: ", i + 1);
         scanf("%f", &s.marks[i]);
         total += s.marks[i];
     }
 
-    percentage = total / 5;  // Calculate percentage
+    percentage = total / 5;  
     char grade = calculateGrade(percentage);
 
     printf("\n- Student Report -\n");
